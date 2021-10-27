@@ -13,7 +13,7 @@ import java.util.concurrent.*;
 public class RabbitmqProducerApplicationTests {
 
 
-    private static final int THREADNUM = 10000;
+    private static final int THREADNUM = 10;
 
 
     CountDownLatch latch=new CountDownLatch(RabbitmqProducerApplicationTests.THREADNUM);

@@ -1,5 +1,6 @@
 package com.example.rabbitmqproducer;
 
+import com.example.rabbitmqproducer.config.RabbitMQConfig;
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -16,7 +17,8 @@ public class RabbitMQProducer{
        // Thread.sleep(2000);
         String context = "hello " + new Date();
        System.out.println("Sender : " + context);
-        this.rabbitTemplate.convertAndSend("rabbitMQ-demo", context);
+       this.rabbitTemplate.convertAndSend(RabbitMQConfig.FANOUT_EXCHANGE_NAME,"",context);
+       //this.rabbitTemplate.convertAndSend("rabbitMQ-demo", context);
       /*  User user = new User();
         user.setName(context);
         System.out.println("User : " + context);

@@ -7,7 +7,8 @@ import org.springframework.stereotype.Component;
 import java.util.Date;
 
 @Component
-@RabbitListener(queues = "rabbitMQ-demo")
+@RabbitListener(queues = "#{queue.name}")//动态绑定
+//@RabbitListener(queues = "rabbitMQ-demo")
 //@RabbitListener(queues = "rabbitMQ-demo-domain")
 public class RabbitMQConsumer {
     @RabbitHandler
