@@ -26,6 +26,7 @@ public class RabbitMQConfig {
 
     @Bean
     public FanoutExchange fanoutExchange() {
+        log.error("dev 1");
         log.error("dev commit1");
         log.error("dev commit2");
         log.error("master commit1");
