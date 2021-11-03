@@ -26,7 +26,7 @@ public class RabbitMQConfig {
 
     @Bean
     public FanoutExchange fanoutExchange() {
-        log.error("【【【交换机实例创建成功】】】master1");
+        log.error("【【【交换机实例创建成功】】】master12");
         return new FanoutExchange(FANOUT_EXCHANGE_NAME);
     }
 
